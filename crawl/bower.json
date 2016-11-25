@@ -1,0 +1,28 @@
+{
+  "name": "crawl",
+  "homepage": "https://github.com/zkhan93/dj_crawler",
+  "authors": [
+    "zeeshan <zkhan1093@gmail.com>"
+  ],
+  "description": "Django app that crawls and extract articles and keywords",
+  "main": "",
+  "keywords": [
+    "Django",
+    "Crawler",
+    "Awesome"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "static/crawl/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}

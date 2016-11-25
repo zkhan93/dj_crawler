@@ -1,0 +1,20 @@
+{%load static%}
+<html>
+	<head>
+		<title>Django Crawler</title>
+		<link rel="stylesheet" type="text/css" href="{%static 'crawl/components/bootstrap/dist/css/bootstrap.min.css'%}" />
+		<link rel="stylesheet" type="text/css" href="{%static 'crawl/components/font-awesome/css/font-awesome.min.css'%}" />
+		{% block head %}
+		{% endblock %}
+	</head>
+	<body>
+		<div class="container">
+			{% block body %}
+			{% endblock %}
+		</div>
+		<script src="{%static 'crawl/components/jquery/dist/jquery.min.js'%}"></script>
+		<script src="{%static 'crawl/components/bootstrap/dist/js/bootstrap.min.js'%}"></script>
+		{% block script %}
+		{% endblock %}
+	</body>
+</html>
