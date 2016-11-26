@@ -11,7 +11,12 @@ class Input(models.Model):
 	created_on=models.DateTimeField(auto_now=True)
 	updated_on=models.DateTimeField(auto_now=True)
 	url=models.CharField(max_length=300)
-	content_identifiers=models.ManyToManyField(ContentIdentifier)
+	post_container_identifiers=models.ForeignKey(ContentIdentifier,related_name='post_container_identifier')
+	post_title_identifiers=models.ForeignKey(ContentIdentifier,related_name='post_title_identifier')
+	post_summary_identifiers=models.ForeignKey(ContentIdentifier,related_name='post_summary_identifier')
+	category_name_identifier=models.ForeignKey(ContentIdentifier,related_name='category_name_identifier')
+	category_title_identifier=models.ForeignKey(ContentIdentifier,related_name='category_title_identifier')
+	category_summary_identifier=models.ForeignKey(ContentIdentifier,related_name='category_summary_identifier')
 
 class Post(models.Model):
 	title=models.CharField(max_length=200)
@@ -20,7 +25,7 @@ class Post(models.Model):
 	input=models.ForeignKey(Input,on_delete=models.CASCADE)
 
 class Category(models.Model):
-	category=models.CharField(max_length=100)
+	name=models.CharField(max_length=100)
 	title=models.CharField(max_length=200)
 	summary=models.TextField()
 	created_on=models.DateTimeField(auto_now=True)
