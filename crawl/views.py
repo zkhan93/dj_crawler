@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from .models import *
 from bs4 import BeautifulSoup
 import requests
@@ -10,6 +10,10 @@ from urlparse import urlparse,urljoin
 def home(request):
 	if request.user.is_authenticated():
 		return redirect('/crawl')
+	return render(request,'crawl/user_login.html');
+
+def user_logout(request):
+	logout(request)
 	return render(request,'crawl/user_login.html');
 
 def user_login(request):
