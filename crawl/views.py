@@ -109,9 +109,9 @@ def insert_posts(posts,category,input):
 			post.title=p['title']
 			post.summary=p['summary']
 			post.link=p['link']
-			post.category=category
 			post.input=input
 			post.save()
+			category.posts.add(post)
 		else:
 			print 'invalid post skipping:',p
 

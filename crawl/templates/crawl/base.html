@@ -2,18 +2,23 @@
 <html>
 	<head>
 		<title>Django Crawler</title>
+
 		<link rel="stylesheet" type="text/css" href="{%static 'crawl/components/bootstrap/dist/css/bootstrap.min.css'%}" />
+		<link rel="stylesheet" type="text/css" href="{%static 'crawl/components/flat-ui/dist/css/flat-ui.css'%}" />
 		<link rel="stylesheet" type="text/css" href="{%static 'crawl/components/font-awesome/css/font-awesome.min.css'%}" />
+		<link rel="stylesheet" type="text/css" href="{%static 'crawl/css/main.css'%}" />
 		{% block head %}
 		{% endblock %}
 	</head>
 	<body>
-		<div class="container-fluid">
-		<div class="jumbotron">
-			<h2 class="heading">Welcome to crawler</h2>
+		<div class="container-fluid jumbotron">
+			<h3 class="heading">Welcome to Crazy Crawler</h3>
 		</div>
 			{% block body %}
 			{% endblock %}
+		
+		<div class="footer">
+			<p>Copyright 2016&copy; Crazy Crawler</p>
 		</div>
 		<script src="{%static 'crawl/components/jquery/dist/jquery.min.js'%}"></script>
 		<script src="{%static 'crawl/components/bootstrap/dist/js/bootstrap.min.js'%}"></script>
